@@ -32,6 +32,10 @@ import java.util.Set;
  */
 public class CommonLettersSnippet {
 
+  private CommonLettersSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Find Common Characters inside given two strings.
    *
