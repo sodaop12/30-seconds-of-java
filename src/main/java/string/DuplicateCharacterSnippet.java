@@ -33,6 +33,10 @@ import java.util.Set;
 
 public class DuplicateCharacterSnippet {
 
+  private DuplicateCharacterSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Remove Duplicate Characters from a string.
    *

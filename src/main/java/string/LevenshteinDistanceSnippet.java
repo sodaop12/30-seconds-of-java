@@ -29,6 +29,10 @@ package string;
  */
 public class LevenshteinDistanceSnippet {
 
+  private LevenshteinDistanceSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Find the Levenshtein distance between two words. https://en.wikipedia.org/wiki/Levenshtein_distance
    *

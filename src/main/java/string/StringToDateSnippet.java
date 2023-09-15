@@ -33,6 +33,10 @@ import java.util.Date;
  */
 public class StringToDateSnippet {
 
+  private StringToDateSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Convert string to date.
    *

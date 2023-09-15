@@ -29,6 +29,10 @@ package string;
  */
 public class ReversStringSnippet {
 
+  private ReversStringSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Reverse string.
    *
