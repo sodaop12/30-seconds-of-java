@@ -62,8 +62,7 @@ public class CompareVersionSnippet {
   }
 
   private static String[] getVersionComponents(String version) {
-    String regex = ".*?((?<!\\w)\\d+(?:[.-]++\\\\d+)*+).*";
-    Pattern pattern = Pattern.compile(regex);
+    Pattern pattern = Pattern.compile(".*?((?<!\\w)\\d+(?:[.-]++\\\\d+)*+).*");
     Matcher matcher = pattern.matcher(version);
     String[] x = {"0"};
     if (matcher.matches()) {
