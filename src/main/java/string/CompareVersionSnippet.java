@@ -24,6 +24,9 @@
 
 package string;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * CompareVersionSnippet.
  */
@@ -60,6 +63,13 @@ public class CompareVersionSnippet {
 
   private static String[] getVersionComponents(String version) {
     String regex = ".*?((?<!\\w)\\d+(?:[.-]++\\\\d+)*+).*";
-    return version.replaceAll(regex, "$1").split("\\.");
+    Pattern pattern = Pattern.compile(regex);
+    Matcher matcher = pattern.matcher(version);
+    String[] x = {"0"};
+    if (matcher.matches()) {
+      String[] versionComponents = matcher.group(1).split("\\.");
+      return versionComponents;
+    }
+    return x;
   }
 }
