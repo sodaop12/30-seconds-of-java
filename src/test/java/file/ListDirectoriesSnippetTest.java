@@ -24,6 +24,7 @@
 
 package file;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
@@ -40,6 +41,9 @@ class ListDirectoriesSnippetTest {
    */
   @Test
   void testListDirectories() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ListDirectoriesSnippet();
+    });
     var files = ListDirectoriesSnippet.listDirectories("src/test/resources");
     assertTrue(Arrays.stream(files).allMatch(File::isDirectory));
     assertTrue(Arrays.asList(files).contains(new File("src/test/resources/dir1")));

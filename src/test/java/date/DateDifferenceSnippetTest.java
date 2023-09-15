@@ -25,6 +25,7 @@
 package date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
@@ -43,7 +44,9 @@ class DateDifferenceSnippetTest {
    */
   @Test
   void testAddDaysToDate() {
-
+    assertThrows(IllegalStateException.class, () -> {
+      new DateDifferenceSnippet();
+    });
     var date1 = LocalDate.of(1998, 9, 24);
     var date2 = LocalDate.of(2023, 3, 22);
 

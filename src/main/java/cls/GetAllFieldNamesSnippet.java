@@ -34,7 +34,7 @@ import java.util.List;
  */
 public class GetAllFieldNamesSnippet {
 
-  private GetAllFieldNamesSnippet() {
+  GetAllFieldNamesSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

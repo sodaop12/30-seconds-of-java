@@ -33,7 +33,7 @@ import java.time.temporal.ChronoUnit;
 
 public class DateDifferenceSnippet {
 
-  private DateDifferenceSnippet() {
+  DateDifferenceSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

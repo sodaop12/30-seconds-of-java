@@ -27,6 +27,7 @@ package array;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import cls.GetAllFieldNamesSnippet;
 import org.junit.jupiter.api.Test;
 
 
@@ -41,6 +42,9 @@ class ReverseArrayTest {
 
   @Test
   void testReverseArrayFull() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ReverseArraySnippet();
+    });
     Integer[] arr = {1, 2, 3, 4, 5};
     Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, arr.length - 1);
     Integer[] expected = {5, 4, 3, 2, 1};

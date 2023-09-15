@@ -32,7 +32,7 @@ public class QuickSortSnippet {
   /**
    * private.
    */
-  private QuickSortSnippet() {
+  QuickSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

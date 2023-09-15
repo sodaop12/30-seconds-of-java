@@ -39,6 +39,9 @@ class ArrayConcatSnippetTest {
    */
   @Test
   void testArrayConcat() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ArraySumSnippet();
+    });
     var integers = ArrayConcatSnippet.arrayConcat(new Integer[5], new Integer[5]);
     assertEquals(10, integers.length);
     var strings = ArrayConcatSnippet.arrayConcat(new String[0], new String[0]);

@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class GetAllMethodsSnippet {
 
-  private GetAllMethodsSnippet() {
+  GetAllMethodsSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

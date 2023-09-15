@@ -35,7 +35,7 @@ import java.net.http.HttpResponse;
  */
 public class HttpGetSnippet {
 
-  private HttpGetSnippet() {
+  HttpGetSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

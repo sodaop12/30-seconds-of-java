@@ -29,7 +29,7 @@ package math;
  */
 public class FactorialSnippet {
 
-  private FactorialSnippet() {
+  FactorialSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -24,6 +24,7 @@
 
 package cls;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -38,6 +39,9 @@ class GetAllMethodsSnippetTest {
    */
   @Test
   void testGetAllMethods() {
+    assertThrows(IllegalStateException.class, () -> {
+      new GetAllMethodsSnippet();
+    });
     var list = GetAllMethodsSnippet.getAllMethods(GetAllMethodsSnippet.class);
     assertTrue(list.contains("getAllMethods"));
   }

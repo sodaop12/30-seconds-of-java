@@ -25,6 +25,7 @@
 package algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +41,9 @@ class LinearSearchSnippetTest {
 
   @Test
   void testLinearSearch() {
+    assertThrows(IllegalStateException.class, () -> {
+      new LinearSearchSnippet();
+    });
     int[] arr = new int[]{220, 33, 11, 4, 45, 1, 8, 5, 7, 23, 8, 56, 3, 12};
     assertEquals(7, LinearSearchSnippet.linearSearch(arr, 5));
 

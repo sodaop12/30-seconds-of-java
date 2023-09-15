@@ -32,7 +32,7 @@ public class LinearSearchSnippet {
   /**
    * private.
    */
-  private LinearSearchSnippet() {
+  LinearSearchSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

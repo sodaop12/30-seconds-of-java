@@ -33,7 +33,7 @@ public class BinarySearchSnippet {
   /**
    * private.
    */
-  private BinarySearchSnippet() {
+  BinarySearchSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

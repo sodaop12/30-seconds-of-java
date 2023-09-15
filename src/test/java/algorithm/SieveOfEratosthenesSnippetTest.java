@@ -25,7 +25,9 @@
 package algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import array.ReverseArraySnippet;
 import org.junit.jupiter.api.Test;
 
 /*
@@ -40,6 +42,9 @@ class SieveOfEratosthenesSnippetTest {
 
   @Test
   void testSieveOfEratosthenes() {
+    assertThrows(IllegalStateException.class, () -> {
+      new SieveOfEratosthenesSnippet();
+    });
     boolean[] arr = SieveOfEratosthenesSnippet.sieveOfEratosthenes(4);
     assertEquals(true, arr[0]);
     assertEquals(true, arr[1]);

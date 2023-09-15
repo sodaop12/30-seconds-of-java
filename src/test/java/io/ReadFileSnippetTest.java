@@ -26,6 +26,7 @@ package io;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.FileNotFoundException;
 import org.junit.jupiter.api.Test;
@@ -40,6 +41,9 @@ class ReadFileSnippetTest {
    */
   @Test
   void testReadFile() throws FileNotFoundException {
+    assertThrows(IllegalStateException.class, () -> {
+      new ReadFileSnippet();
+    });
     assertEquals("foo", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(0));
     assertEquals("bar", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
     assertEquals("baz", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(2));

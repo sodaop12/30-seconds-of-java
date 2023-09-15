@@ -34,7 +34,7 @@ public class CountingSortSnippet {
   /**
    * private.
    */
-  private CountingSortSnippet() {
+  CountingSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

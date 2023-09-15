@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class FindMaxSnippet {
 
-  private FindMaxSnippet() {
+  FindMaxSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class GetAllPublicFieldNamesSnippet {
 
-  private GetAllPublicFieldNamesSnippet() {
+  GetAllPublicFieldNamesSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

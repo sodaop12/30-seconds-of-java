@@ -32,7 +32,7 @@ import java.util.concurrent.Executors;
  */
 public class ThreadPool {
 
-  private ThreadPool() {
+  ThreadPool() {
     throw new IllegalStateException("Utility class");
   }
 

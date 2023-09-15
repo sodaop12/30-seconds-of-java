@@ -29,7 +29,7 @@ package string;
  */
 public class MaxCharacterCountSnippet {
 
-  private MaxCharacterCountSnippet() {
+  MaxCharacterCountSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -29,7 +29,7 @@ package string;
  */
 public class ReversStringSnippet {
 
-  private ReversStringSnippet() {
+  ReversStringSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

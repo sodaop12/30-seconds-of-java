@@ -31,7 +31,7 @@ import java.util.Arrays;
   */
 public class FindMinSnippet {
 
-  private FindMinSnippet() {
+  FindMinSnippet() {
     throw new IllegalStateException("Utility class");
   }
  

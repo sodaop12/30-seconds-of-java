@@ -29,7 +29,7 @@ package math;
  */
 public class EloRatingSnippet {
 
-  private EloRatingSnippet() {
+  EloRatingSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

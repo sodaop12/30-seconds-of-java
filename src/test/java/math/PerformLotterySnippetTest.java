@@ -26,6 +26,7 @@ package math;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -40,6 +41,9 @@ class PerformLotterySnippetTest {
    */
   @Test
   void testPerformLottery() {
+    assertThrows(IllegalStateException.class, () -> {
+      new PrimeNumberSnippet();
+    });
     var numbers0 = PerformLotterySnippet.performLottery(0, 0);
     assertArrayEquals(new Integer[] {}, numbers0);
     var numbers1 = PerformLotterySnippet.performLottery(1, 1);

@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class ArrayMedianSnippet {
 
-  private ArrayMedianSnippet() {
+  ArrayMedianSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

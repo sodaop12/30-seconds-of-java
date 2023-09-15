@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
  */
 public class CompareVersionSnippet {
 
-  private CompareVersionSnippet() {
+  CompareVersionSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -26,6 +26,7 @@ package string;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,6 +38,9 @@ class CompareVersionSnippetTest {
    */
   @Test
    void testCompareVersion() {
+    assertThrows(IllegalStateException.class, () -> {
+      new CompareVersionSnippet();
+    });
     assertEquals(0, CompareVersionSnippet.compareVersion("awesome-app-2.3.4-SNAPSHOT", "2.3.4"));
     assertEquals(0, CompareVersionSnippet.compareVersion("2.3.4-SNAPSHOT", "2.3.4"));
     assertEquals(0, CompareVersionSnippet.compareVersion("2.3.4.1-SNAPSHOT", "2.3.4"));

@@ -34,7 +34,7 @@ import java.util.List;
  */
 public class ReadLinesSnippet {
 
-  private ReadLinesSnippet() {
+  ReadLinesSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

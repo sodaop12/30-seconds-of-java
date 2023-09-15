@@ -33,6 +33,9 @@ class NaturalNumberBinaryConversionSnippetTest {
 
   @Test
   void convertPositiveIntegerToBinary() {
+    assertThrows(IllegalStateException.class, () -> {
+      new NaturalNumberBinaryConversionSnippet();
+    });
     assertEquals("0", NaturalNumberBinaryConversionSnippet.toBinary(0));
     assertEquals("11", NaturalNumberBinaryConversionSnippet.toBinary(3));
     assertEquals("101", NaturalNumberBinaryConversionSnippet.toBinary(5));

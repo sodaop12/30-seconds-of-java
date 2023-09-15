@@ -26,6 +26,7 @@ package algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -48,6 +49,10 @@ class InsertionSortSnippetTest {
     assertEquals(4, arr[3]);
     assertEquals(5, arr[4]);
     assertEquals(6, arr[5]);
+
+    assertThrows(IllegalStateException.class, () -> {
+      new InsertionSortSnippet();
+    });
 
     assertNotEquals(7, arr.length);
     assertNotEquals(2, arr[0]);

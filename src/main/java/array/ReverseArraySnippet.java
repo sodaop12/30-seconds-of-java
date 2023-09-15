@@ -29,7 +29,7 @@ package array;
  */
 public class ReverseArraySnippet {
 
-  private ReverseArraySnippet() {
+  ReverseArraySnippet() {
     throw new IllegalStateException("Utility class");
   }
 

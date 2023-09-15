@@ -31,7 +31,7 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class CreatingObjectSnippet {
 
-  private CreatingObjectSnippet() {
+  CreatingObjectSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -29,7 +29,7 @@ package string;
  */
 public class LevenshteinDistanceSnippet {
 
-  private LevenshteinDistanceSnippet() {
+  LevenshteinDistanceSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

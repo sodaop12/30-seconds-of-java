@@ -31,7 +31,7 @@ import java.util.Base64;
  */
 public class Base64EncodeSnippet {
 
-  private Base64EncodeSnippet() {
+  Base64EncodeSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

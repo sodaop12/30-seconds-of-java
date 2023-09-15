@@ -25,6 +25,7 @@
 package math;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class FactorialSnippetTest {
    */
   @Test
   void testFactorial() {
+    assertThrows(IllegalStateException.class, () -> {
+      new FactorialSnippet();
+    });
     assertEquals(1, FactorialSnippet.factorial(0));
     assertEquals(1, FactorialSnippet.factorial(1));
     assertEquals(2, FactorialSnippet.factorial(2));

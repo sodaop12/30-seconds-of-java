@@ -42,6 +42,9 @@ class ReadLinesSnippetTest {
    */
   @Test
   void testReadLines() throws IOException {
+    assertThrows(IllegalStateException.class, () -> {
+      new ReadLinesSnippet();
+    });
     var somelines = ReadLinesSnippet.readLines("src/test/resources/somelines.txt");
     assertEquals(3, somelines.size());
     assertEquals("foo", somelines.get(0));

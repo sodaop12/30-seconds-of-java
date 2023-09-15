@@ -25,6 +25,7 @@
 package cls;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,9 @@ class GetAllPublicFieldNamesSnippetTest {
    */
   @Test
   void testGetAllPublicFieldNames() {
+    assertThrows(IllegalStateException.class, () -> {
+      new GetAllPublicFieldNamesSnippet();
+    });
     class TestClass {
       public int fieldOne;
       public int fieldTwo;

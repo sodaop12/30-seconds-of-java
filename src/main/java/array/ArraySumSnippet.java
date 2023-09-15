@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class ArraySumSnippet {
 
-  private ArraySumSnippet() {
+  ArraySumSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

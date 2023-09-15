@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class ArrayMeanSnippet {
 
-  private ArrayMeanSnippet() {
+  ArrayMeanSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -24,6 +24,7 @@
 
 package media;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.awt.AWTException;
@@ -43,6 +44,9 @@ class CaptureScreenSnippetTest {
    */
   @Test
   void testCaptureScreen() throws IOException, AWTException {
+    assertThrows(IllegalStateException.class, () -> {
+      new CaptureScreenSnippet();
+    });
     final var filename = "src/test/resources/screenshot.png";
     try {
       CaptureScreenSnippet.captureScreen(filename);

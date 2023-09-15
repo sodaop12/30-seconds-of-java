@@ -39,7 +39,7 @@ import java.util.StringJoiner;
  */
 public class HttpPostSnippet {
 
-  private HttpPostSnippet() {
+  HttpPostSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

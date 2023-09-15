@@ -31,7 +31,7 @@ import java.util.Collections;
  * PerformLotterySnippet.
  */
 public class PerformLotterySnippet {
-  private PerformLotterySnippet() {
+  PerformLotterySnippet() {
     throw new IllegalStateException("Utility class");
   }
 

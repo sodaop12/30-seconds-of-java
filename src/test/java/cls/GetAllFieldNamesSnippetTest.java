@@ -25,6 +25,7 @@
 package cls;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,9 @@ class GetAllFieldNamesSnippetTest {
    */
   @Test
   void testGetAllFieldNames() {
+    assertThrows(IllegalStateException.class, () -> {
+      new GetAllFieldNamesSnippet();
+    });
     class SuperClass {
       public int superFieldOne;
       private int superFieldTwo;

@@ -33,7 +33,7 @@ import java.util.Set;
 
 public class DuplicateCharacterSnippet {
 
-  private DuplicateCharacterSnippet() {
+  DuplicateCharacterSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

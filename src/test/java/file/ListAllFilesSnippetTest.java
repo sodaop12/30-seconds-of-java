@@ -25,6 +25,7 @@
 package file;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class ListAllFilesSnippetTest {
    */
   @Test
   void testListAllFiles() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ListAllFilesSnippet();
+    });
     var files = ListAllFilesSnippet.listAllFiles("src/test/resources");
     assertEquals(6, files.size());
   }

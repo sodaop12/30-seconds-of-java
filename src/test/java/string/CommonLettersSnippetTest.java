@@ -25,6 +25,7 @@
 package string;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -39,6 +40,9 @@ class CommonLettersSnippetTest {
   */
   @Test
   void testgetCommonLetters() {
+    assertThrows(IllegalStateException.class, () -> {
+      new CommonLettersSnippet();
+    });
     String str = "abfcd!?055bcxaz^fg#)";
     String str2 = "b45893fndg%+1vc";
     assertEquals("b c d f g", CommonLettersSnippet.getCommonLetters(str, str2));

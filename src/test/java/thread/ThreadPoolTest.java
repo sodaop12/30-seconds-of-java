@@ -26,9 +26,11 @@ package thread;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.concurrent.ThreadPoolExecutor;
 import org.junit.jupiter.api.Test;
+import string.StringToDateSnippet;
 
 /*
  * Tests for 30 Seconds of Java code library
@@ -40,6 +42,9 @@ class ThreadPoolTest {
    */
   @Test
   void testCreateFixedThreadPool() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ThreadPool();
+    });
     var numProcessors = Runtime.getRuntime().availableProcessors();
     var executorService = (ThreadPoolExecutor) ThreadPool.createFixedThreadPool();
     assertEquals(numProcessors, executorService.getCorePoolSize());

@@ -29,7 +29,7 @@ package math;
  */
 public class PrimeNumberSnippet {
 
-  private PrimeNumberSnippet() {
+  PrimeNumberSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -29,7 +29,7 @@ package math;
  */
 public class HaversineFormulaSnippet {
 
-  private HaversineFormulaSnippet() {
+  HaversineFormulaSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

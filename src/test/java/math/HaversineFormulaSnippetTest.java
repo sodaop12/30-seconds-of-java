@@ -25,6 +25,7 @@
 package math;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -41,6 +42,9 @@ class HaversineFormulaSnippetTest {
    */
   @Test
   void testFindHaversineDistance() {
+    assertThrows(IllegalStateException.class, () -> {
+      new HaversineFormulaSnippet();
+    });
     var distance1 = HaversineFormulaSnippet
         .findHaversineDistance(28.7041, 77.1025, 30.9661, 76.5231);
     assertEquals(257.7, distance1, 0.1);

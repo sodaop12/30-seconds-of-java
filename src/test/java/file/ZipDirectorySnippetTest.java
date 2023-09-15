@@ -45,6 +45,9 @@ class ZipDirectorySnippetTest {
    */
   @Test
   void testZipFileDirectory() throws IOException {
+    assertThrows(IllegalStateException.class, () -> {
+      new ZipDirectorySnippet();
+    });
     final var src = "src/test/resources/dir3";
     final var dst = "src/test/resources/dir3.zip";
     try {

@@ -25,6 +25,7 @@
 package algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -41,6 +42,9 @@ class BinarySearchSnippetTest {
 
   @Test
   void testBinarySearch() {
+    assertThrows(IllegalStateException.class, () -> {
+      new BinarySearchSnippet();
+    });
     int[] arr = new int[]{1, 5, 33, 40, 45, 51, 68, 75, 78, 123, 180, 256, 300, 312};
     assertEquals(4, BinarySearchSnippet.binarySearch(arr, 0, arr.length - 1, 45));
 

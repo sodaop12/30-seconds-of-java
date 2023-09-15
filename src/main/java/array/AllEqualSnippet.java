@@ -34,7 +34,7 @@ public class AllEqualSnippet {
   /**
    * private.
    */
-  private AllEqualSnippet() {
+  AllEqualSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

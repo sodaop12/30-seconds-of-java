@@ -32,7 +32,7 @@ import java.util.Set;
  */
 public class CommonLettersSnippet {
 
-  private CommonLettersSnippet() {
+  CommonLettersSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

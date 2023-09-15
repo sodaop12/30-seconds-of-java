@@ -33,7 +33,7 @@ import java.util.Date;
  */
 public class StringToDateSnippet {
 
-  private StringToDateSnippet() {
+  StringToDateSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

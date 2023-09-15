@@ -25,6 +25,7 @@
 package encoding;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class Base64DecodeSnippetTest {
    */
   @Test
   void testBase64Decoding() {
+    assertThrows(IllegalStateException.class, () -> {
+      new Base64DecodeSnippet();
+    });
     var decodedString = Base64DecodeSnippet.decodeBase64("VGVzdFN0cmluZw==");
     assertEquals("TestString", decodedString);
   }

@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class AnagramSnippet {
 
-  private AnagramSnippet() {
+  AnagramSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

@@ -26,8 +26,8 @@ package io;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,6 +43,9 @@ class InputStreamToStringSnippetTest {
    */
   @Test
   void testInputStreamToString() throws IOException {
+    assertThrows(IllegalStateException.class, () -> {
+      new InputStreamToStringSnippet();
+    });
     String newLine = System.getProperty("line.separator");
     String str = new StringBuilder()
             .append("ąćśź").append(newLine)

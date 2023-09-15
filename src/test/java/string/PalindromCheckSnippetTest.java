@@ -25,6 +25,7 @@
 package string;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,9 @@ class PalindromCheckSnippetTest {
    */
   @Test
   void testIsPalindrome() {
+    assertThrows(IllegalStateException.class, () -> {
+      new PalindromCheckSnippet();
+    });
     assertTrue(PalindromCheckSnippet.isPalindrome("saippuakauppias"));
     // non-letter characters are skipped
     assertTrue(PalindromCheckSnippet.isPalindrome("111 Saippua - Kauppias 321"));

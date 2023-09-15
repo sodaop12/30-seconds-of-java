@@ -29,7 +29,7 @@ package math;
  */
 public class LeastCommonMultipleSnippet {
 
-  private LeastCommonMultipleSnippet() {
+  LeastCommonMultipleSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

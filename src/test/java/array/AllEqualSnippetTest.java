@@ -41,6 +41,9 @@ class AllEqualSnippetTest {
    */
   @Test
   void testAllEqual() {
+    assertThrows(IllegalStateException.class, () -> {
+      new AllEqualSnippet();
+    });
     var intArray = new Integer[5];
     assertTrue(AllEqualSnippet.allEqual(intArray));
     intArray[0] = 1;

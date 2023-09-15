@@ -33,7 +33,7 @@ public class SieveOfEratosthenesSnippet {
   /**
    * private.
    */
-  private SieveOfEratosthenesSnippet() {
+  SieveOfEratosthenesSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

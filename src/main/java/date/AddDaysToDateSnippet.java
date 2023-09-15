@@ -33,7 +33,7 @@ import java.util.Date;
  */
 public class AddDaysToDateSnippet {
 
-  private AddDaysToDateSnippet() {
+  AddDaysToDateSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

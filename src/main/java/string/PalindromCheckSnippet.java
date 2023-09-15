@@ -29,7 +29,7 @@ package string;
  */
 public class PalindromCheckSnippet {
 
-  private PalindromCheckSnippet() {
+  PalindromCheckSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

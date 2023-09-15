@@ -25,6 +25,7 @@
 package math;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class GreatestCommonDivisorSnippetTest {
    */
   @Test
   void testGcd() {
+    assertThrows(IllegalStateException.class, () -> {
+      new GreatestCommonDivisorSnippet();
+    });
     assertEquals(2, GreatestCommonDivisorSnippet.gcd(2, 4));
     assertEquals(1, GreatestCommonDivisorSnippet.gcd(2, 5));
     assertEquals(6, GreatestCommonDivisorSnippet.gcd(18, 24));

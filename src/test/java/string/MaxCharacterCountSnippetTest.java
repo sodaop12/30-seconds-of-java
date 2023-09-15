@@ -25,6 +25,7 @@
 package string;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +41,9 @@ class MaxCharacterCountSnippetTest {
     */
   @Test
   void testgetMaxCharacterCount() {
+    assertThrows(IllegalStateException.class, () -> {
+      new MaxCharacterCountSnippet();
+    });
     assertEquals(5, MaxCharacterCountSnippet.getMaxCharacterCount("dddddsgddvcidd", 'd'));
     assertEquals(4, MaxCharacterCountSnippet.getMaxCharacterCount("bbkfgjhgjkbbbb", 'b'));
     assertEquals(6, MaxCharacterCountSnippet.getMaxCharacterCount("saalallaaaaaala", 'a'));

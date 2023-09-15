@@ -25,6 +25,7 @@
 package array;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class ArrayMeanSnippetTest {
    */
   @Test
   void testArrayMean() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ArraySumSnippet();
+    });
     assertEquals(4.7, ArrayMeanSnippet.arrayMean(new int[]{10, 9, 4, 1, 3, -11, 20, 6, 2, 3}));
     assertEquals(-62.75, ArrayMeanSnippet.arrayMean(new int[]{-30, -31, -63, -127}));
   }

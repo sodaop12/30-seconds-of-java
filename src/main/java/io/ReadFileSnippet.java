@@ -35,7 +35,7 @@ import java.util.stream.Stream;
  */
 public class ReadFileSnippet {
 
-  private ReadFileSnippet() {
+  ReadFileSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

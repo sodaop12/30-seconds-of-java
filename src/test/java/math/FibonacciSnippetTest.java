@@ -25,6 +25,7 @@
 package math;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class FibonacciSnippetTest {
    */
   @Test
   void testFibonacci() {
+    assertThrows(IllegalStateException.class, () -> {
+      new FibonacciSnippet();
+    });
     assertEquals(0, FibonacciSnippet.fibonacci(0));
     assertEquals(1, FibonacciSnippet.fibonacci(1));
     assertEquals(1, FibonacciSnippet.fibonacci(2));

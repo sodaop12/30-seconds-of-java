@@ -39,6 +39,9 @@ class MultiArrayConcatenationSnippetTest {
    */
   @Test
   void testnArrayConcat() {
+    assertThrows(IllegalStateException.class, () -> {
+      new MultiArrayConcatenationSnippet();
+    });
     var single = MultiArrayConcatenationSnippet.multiArrayConcat(new Integer[1]);
     assertEquals(1, single.length);
     var multiple

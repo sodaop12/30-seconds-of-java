@@ -25,6 +25,7 @@
 package file;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
@@ -44,6 +45,9 @@ class ListFilesInDirectorySnippetTest {
    */
   @Test
   void testListFilesInDirectory() {
+    assertThrows(IllegalStateException.class, () -> {
+      new ListFilesInDirectorySnippet();
+    });
     var files = ListFilesInDirectorySnippet.listFilesInDirectory(
         Paths.get("src", "test", "resources").toString()
     );

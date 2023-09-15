@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class ArrayConcatSnippet {
 
-  private ArrayConcatSnippet() {
+  ArrayConcatSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

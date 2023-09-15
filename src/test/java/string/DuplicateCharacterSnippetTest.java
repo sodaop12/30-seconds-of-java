@@ -25,6 +25,7 @@
 package string;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +41,9 @@ class DuplicateCharacterSnippetTest {
    */
   @Test
   void testRemoveDuplicateCharacters() {
+    assertThrows(IllegalStateException.class, () -> {
+      new DuplicateCharacterSnippet();
+    });
     assertEquals("z", DuplicateCharacterSnippet.removeDuplicateCharacters("zzzzzzzzzzzzzzzzz"));
     assertEquals("abcd", DuplicateCharacterSnippet.removeDuplicateCharacters("aabbccdd"));
     assertEquals("1289", DuplicateCharacterSnippet.removeDuplicateCharacters("1219218181921"));

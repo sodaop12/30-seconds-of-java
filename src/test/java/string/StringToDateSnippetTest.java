@@ -25,6 +25,7 @@
 package string;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.text.ParseException;
 import java.util.Calendar;
@@ -40,6 +41,9 @@ class StringToDateSnippetTest {
    */
   @Test
   void testStringToDate() throws ParseException {
+    assertThrows(IllegalStateException.class, () -> {
+      new StringToDateSnippet();
+    });
     var calendar = Calendar.getInstance();
     calendar.setTime(StringToDateSnippet.stringToDate("2017-08-18", "yyyy-MM-dd"));
     assertEquals(2017, calendar.get(Calendar.YEAR));

@@ -25,6 +25,7 @@
 package string;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,9 @@ class LevenshteinDistanceSnippetTest {
    */
   @Test
   void testFindLevenshteinDistance() {
+    assertThrows(IllegalStateException.class, () -> {
+      new LevenshteinDistanceSnippet();
+    });
     assertEquals(3, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", "kit"));
     assertEquals(6, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", ""));
     assertEquals(7, LevenshteinDistanceSnippet.findLevenshteinDistance("", "sitting"));

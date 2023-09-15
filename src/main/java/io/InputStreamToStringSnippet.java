@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  */
 public class InputStreamToStringSnippet {
 
-  private InputStreamToStringSnippet() {
+  InputStreamToStringSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

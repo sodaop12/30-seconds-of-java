@@ -26,6 +26,7 @@ package cls;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.lang.reflect.InvocationTargetException;
 import org.junit.jupiter.api.Test;
@@ -48,5 +49,8 @@ class CreatingObjectSnippetTest {
     assertEquals(String.class, CreatingObjectSnippet.createObject("java.lang.String").getClass());
     assertNotEquals(Integer.class,
             CreatingObjectSnippet.createObject("java.lang.String").getClass());
+    assertThrows(IllegalStateException.class, () -> {
+      new GetAllFieldNamesSnippet();
+    });
   }
 }

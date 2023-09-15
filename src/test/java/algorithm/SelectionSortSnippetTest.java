@@ -25,6 +25,7 @@
 package algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -39,6 +40,9 @@ class SelectionSortSnippetTest {
    */
   @Test
   void testSelectionSort() {
+    assertThrows(IllegalStateException.class, () -> {
+      new SelectionSortSnippet();
+    });
     var arr = new int[] {6, 3, 1, 5, 4, 2};
     SelectionSortSnippet.selectionSort(arr);
     assertEquals(6, arr.length);

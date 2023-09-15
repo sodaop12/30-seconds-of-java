@@ -24,6 +24,8 @@
 
 package date;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -46,6 +48,9 @@ class AddDaysToDateSnippetTest {
   */
   @Test
   void testAddDaysToDate() throws ParseException {
+    assertThrows(IllegalStateException.class, () -> {
+      new AddDaysToDateSnippet();
+    });
     DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
 
     String dateStr = "January 1, 2022";

@@ -33,7 +33,7 @@ public class MergeSortSnippet {
   /**
    * private.
    */
-  private MergeSortSnippet() {
+  MergeSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

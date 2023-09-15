@@ -26,6 +26,7 @@ package network;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -41,6 +42,9 @@ class HttpPostSnippetTest {
    */
   @Test
   void testHttpPost() throws IOException, InterruptedException {
+    assertThrows(IllegalStateException.class, () -> {
+      new HttpPostSnippet();
+    });
     HashMap<String, String> arguments = new HashMap<>();
     arguments.put("data", "Hello World");
     var result = HttpPostSnippet.httpPost("https://postman-echo.com/post", arguments);

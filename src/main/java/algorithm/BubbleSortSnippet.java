@@ -32,7 +32,7 @@ public class BubbleSortSnippet {
   /**
    * private.
    */
-  private BubbleSortSnippet() {
+  BubbleSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

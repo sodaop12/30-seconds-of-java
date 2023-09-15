@@ -25,6 +25,7 @@
 package math;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,9 @@ class PrimeNumberSnippetTest {
    */
   @Test
   void testIsPrime() {
+    assertThrows(IllegalStateException.class, () -> {
+      new PrimeNumberSnippet();
+    });
     assertTrue(PrimeNumberSnippet.isPrime(2));
     assertTrue(PrimeNumberSnippet.isPrime(3));
     assertTrue(PrimeNumberSnippet.isPrime(17));

@@ -36,7 +36,7 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipFileSnippet {
 
-  private ZipFileSnippet() {
+  ZipFileSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

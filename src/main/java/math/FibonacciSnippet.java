@@ -31,7 +31,7 @@ import java.util.List;
  * FibonacciSnippet.
  */
 public class FibonacciSnippet {
-  private FibonacciSnippet() {
+  FibonacciSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

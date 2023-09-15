@@ -29,7 +29,7 @@ package math;
  */
 public class LuhnSnippet {
 
-  private LuhnSnippet() {
+  LuhnSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

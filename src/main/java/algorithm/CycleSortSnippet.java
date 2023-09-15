@@ -33,7 +33,7 @@ public class CycleSortSnippet {
   /**
    * private.
    */
-  private CycleSortSnippet() {
+  CycleSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

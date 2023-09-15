@@ -34,7 +34,7 @@ import java.util.stream.Stream;
  */
 public class NaturalNumberBinaryConversionSnippet {
 
-  private NaturalNumberBinaryConversionSnippet() {
+  NaturalNumberBinaryConversionSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

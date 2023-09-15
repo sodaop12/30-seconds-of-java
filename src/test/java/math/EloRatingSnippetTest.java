@@ -25,6 +25,7 @@
 package math;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -41,6 +42,9 @@ class EloRatingSnippetTest {
    */
   @Test
   void testSingleMatchRatings() {
+    assertThrows(IllegalStateException.class, () -> {
+      new EloRatingSnippet();
+    });
 
     //No rating change for draw between players of equal strength
     assertEquals(1500.0, EloRatingSnippet.calculateMatchRating(1500, 1500, 0.5), DELTA);

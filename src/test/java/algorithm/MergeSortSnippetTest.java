@@ -24,8 +24,9 @@
 
 package algorithm;
 
- import static org.junit.jupiter.api.Assertions.assertEquals;
- 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
  
 /*
@@ -37,7 +38,7 @@ class MergeSortSnippetTest {
     * Tests for {@link MergeSortSnippet#mergeSort(int[], int, int)}.
     */
   @Test
-   void testMergeSort() {
+  void testMergeSort() {
     var arr = new int[] {7, 13, 3, 1, 8, 5};
     MergeSortSnippet.mergeSort(arr, 0, arr.length - 1);
     assertEquals(6, arr.length);
@@ -47,5 +48,8 @@ class MergeSortSnippetTest {
     assertEquals(7, arr[3]);
     assertEquals(8, arr[4]);
     assertEquals(13, arr[5]);
+    assertThrows(IllegalStateException.class, () -> {
+      new MergeSortSnippet();
+    });
   }
 }

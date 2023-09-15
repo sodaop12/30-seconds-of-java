@@ -32,7 +32,7 @@ public class InsertionSortSnippet {
   /**
    * private.
    */
-  private InsertionSortSnippet() {
+  InsertionSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

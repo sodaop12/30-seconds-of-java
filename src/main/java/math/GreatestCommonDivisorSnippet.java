@@ -29,7 +29,7 @@ package math;
  */
 public class GreatestCommonDivisorSnippet {
 
-  private GreatestCommonDivisorSnippet() {
+  GreatestCommonDivisorSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

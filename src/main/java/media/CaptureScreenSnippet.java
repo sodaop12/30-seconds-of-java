@@ -37,7 +37,7 @@ import javax.imageio.ImageIO;
  */
 public class CaptureScreenSnippet {
 
-  private CaptureScreenSnippet() {
+  CaptureScreenSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

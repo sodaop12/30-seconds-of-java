@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class ListAllFilesSnippet {
 
-  private ListAllFilesSnippet() {
+  ListAllFilesSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

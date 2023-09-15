@@ -32,7 +32,7 @@ public class SelectionSortSnippet {
   /**
    * private.
    */
-  private SelectionSortSnippet() {
+  SelectionSortSnippet() {
     throw new IllegalStateException("Utility class");
   }
 

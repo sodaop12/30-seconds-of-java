@@ -31,7 +31,7 @@ import java.util.Arrays;
  */
 public class MultiArrayConcatenationSnippet {
 
-  private MultiArrayConcatenationSnippet() {
+  MultiArrayConcatenationSnippet() {
     throw new IllegalStateException("Utility class");
   }
 
