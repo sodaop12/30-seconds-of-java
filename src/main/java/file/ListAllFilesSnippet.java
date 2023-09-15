@@ -33,6 +33,10 @@ import java.util.List;
  */
 public class ListAllFilesSnippet {
 
+  private ListAllFilesSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Recursively list all the files in directory.
    *

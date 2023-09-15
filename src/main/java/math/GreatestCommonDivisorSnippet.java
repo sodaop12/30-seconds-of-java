@@ -29,6 +29,10 @@ package math;
  */
 public class GreatestCommonDivisorSnippet {
 
+  private GreatestCommonDivisorSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Greatest common divisor calculation.
    *

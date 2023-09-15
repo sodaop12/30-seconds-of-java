@@ -36,6 +36,10 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipDirectorySnippet {
 
+  private ZipDirectorySnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Zip a complete directory.
    *

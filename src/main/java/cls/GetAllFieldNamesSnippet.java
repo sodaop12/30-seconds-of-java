@@ -28,7 +28,6 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * GetAllFieldNamesSnippet.
@@ -50,10 +49,9 @@ public class GetAllFieldNamesSnippet {
     var currentClazz = clazz;
     while (currentClazz != null) {
       fields.addAll(
-          Arrays.stream(currentClazz.getDeclaredFields())
-              .filter(field -> !field.isSynthetic())
-              .map(Field::getName)
-              .collect(Collectors.toList()));
+              Arrays.stream(currentClazz.getDeclaredFields())
+                      .filter(field -> !field.isSynthetic())
+                      .map(Field::getName).toList());
       currentClazz = currentClazz.getSuperclass();
     }
     return fields;

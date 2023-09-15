@@ -28,6 +28,10 @@ package math;
  * LeastCommonMultipleSnippet.
  */
 public class LeastCommonMultipleSnippet {
+
+  private LeastCommonMultipleSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
   /**
    * Least common multiple  calculation.
    *

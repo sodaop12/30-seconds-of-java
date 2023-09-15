@@ -31,6 +31,9 @@ import java.util.List;
  * FibonacciSnippet.
  */
 public class FibonacciSnippet {
+  private FibonacciSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
 
   /**
    * Recursive Fibonacci series. Works only for small n and is spectacularly inefficient
