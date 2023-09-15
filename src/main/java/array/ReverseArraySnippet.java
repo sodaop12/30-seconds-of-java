@@ -29,6 +29,10 @@ package array;
  */
 public class ReverseArraySnippet {
 
+  private ReverseArraySnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * The function then reverses the elements of the array between the starting and ending
    * indices using a while loop and a temporary variable `temp`. Finally, the function returns

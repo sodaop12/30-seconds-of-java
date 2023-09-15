@@ -30,6 +30,13 @@ package algorithm;
 public class LinearSearchSnippet {
 
   /**
+   * private.
+   */
+  private LinearSearchSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Search an item with linearSearch algorithm.
    *
    * @param arr array to search

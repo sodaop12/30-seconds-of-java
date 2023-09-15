@@ -30,6 +30,13 @@ package algorithm;
 public class InsertionSortSnippet {
 
   /**
+   * private.
+   */
+  private InsertionSortSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Sort an array with insertionSort algorithm.
    *
    * @param arr array to sort

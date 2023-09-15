@@ -28,7 +28,15 @@ package algorithm;
  * MergeSortSnippet.
  */
 
-public class MergeSortSnippet {  
+public class MergeSortSnippet {
+
+  /**
+   * private.
+   */
+  private MergeSortSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
      * Sort an array with qmergesort algorithm.
      *

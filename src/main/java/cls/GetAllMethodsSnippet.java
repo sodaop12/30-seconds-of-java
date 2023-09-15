@@ -34,6 +34,10 @@ import java.util.stream.Collectors;
  */
 public class GetAllMethodsSnippet {
 
+  private GetAllMethodsSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Print all declared methods of the class.
    *

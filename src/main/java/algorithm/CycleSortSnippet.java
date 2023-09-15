@@ -31,6 +31,13 @@ package algorithm;
 public class CycleSortSnippet {
 
   /**
+   * private.
+   */
+  private CycleSortSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Sort an array with cycleSort algorithm.
    *
    * @param arr array to sort

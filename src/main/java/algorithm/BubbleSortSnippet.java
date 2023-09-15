@@ -30,6 +30,13 @@ package algorithm;
 public class BubbleSortSnippet {
 
   /**
+   * private.
+   */
+  private BubbleSortSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Sort an array with bubbleSort algorithm.
    *
    * @param arr array to sort

@@ -31,6 +31,13 @@ package algorithm;
 public class BinarySearchSnippet {
 
   /**
+   * private.
+   */
+  private BinarySearchSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Search an item with binarySearch algorithm.
    *
    * @param arr sorted array to search

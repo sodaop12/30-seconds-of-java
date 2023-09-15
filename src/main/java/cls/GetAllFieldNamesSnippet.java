@@ -35,6 +35,10 @@ import java.util.stream.Collectors;
  */
 public class GetAllFieldNamesSnippet {
 
+  private GetAllFieldNamesSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Print all declared field names of the class or the interface the class extends.
    *

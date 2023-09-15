@@ -30,6 +30,13 @@ package algorithm;
 public class SelectionSortSnippet {
 
   /**
+   * private.
+   */
+  private SelectionSortSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Sort an array with selectionSort algorithm.
    *
    * @param arr array to sort

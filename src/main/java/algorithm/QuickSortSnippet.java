@@ -30,6 +30,13 @@ package algorithm;
 public class QuickSortSnippet {
 
   /**
+   * private.
+   */
+  private QuickSortSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Sort an array with quicksort algorithm.
    *
    * @param arr   array to sort
