@@ -42,12 +42,11 @@ public class PalindromCheckSnippet {
    */
   public static boolean isPalindrome(String s) {
     for (int i = 0, j = s.length() - 1; i < j; i++, j--) {
-      int x = i;
-      while (x < j && !Character.isLetter(s.charAt(i))) {
-        i++;
+      while (i < j && !Character.isLetter(s.charAt(i))) {
+        i = i + 1;
       }
-      while (x < j && !Character.isLetter(s.charAt(j))) {
-        j--;
+      while (i < j && !Character.isLetter(s.charAt(j))) {
+        j = j - 1;
       }
 
       if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) {
